@@ -208,6 +208,7 @@ def detect_onedrive_root() -> Path | None:
         General OneDrive variable
     """
     candidates = (
+        "Quantum Design",
         "OneDrive",
         "OneDriveConsumer",
         "OneDriveCommercial",
