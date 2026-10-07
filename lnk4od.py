@@ -208,6 +208,7 @@ def detect_onedrive_root() -> Path | None:
         General OneDrive variable
     """
     candidates = (
+        "Quantum Design",
         "OneDrive",
         "OneDriveConsumer",
         "OneDriveCommercial",
@@ -217,6 +218,7 @@ def detect_onedrive_root() -> Path | None:
 
     for name in candidates:
         value = os.environ.get(name)
+        print(f"Checking environment variable {name}: {value}", file=sys.stderr)
 
         if value:
             p = Path(value)
